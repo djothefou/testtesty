@@ -4,9 +4,7 @@ services:
   - redis-server
 addons:
   postgresql: '9.6'
-  apt:
-  packages:
-    - google-chrome-stable
+  chrome: stable
 before_script:
   - psql -c 'create database toto_test;' -U postgres
 script:
